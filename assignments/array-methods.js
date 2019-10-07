@@ -86,8 +86,23 @@ console.log(ticketPriceTotal);
 // ==== Challenge 5: Be Creative ====
 // Now that you have used .forEach(), .map(), .filter(), and .reduce().  I want you to think of potential problems you could solve given the data set and the 5k fun run theme.  Try to create and then solve 3 unique problems using one or many of the array methods listed above.
 
-// Problem 1
+// Problem 1: Require emails and their last names for a congratulatory email after the race.
 
-// Problem 2
+let mailingList = runners.map((runners) => {
+  return runners.email + " is the email of " + runners.last_name;
+});
+console.log(mailingList);
 
-// Problem 3
+// Problem 2: DabZ, Livetube, and Quaxo accidentally all have the same colored shirts. Filter the runners who are from these companies so they can choose the right shirt instead of one of the different companies'.
+
+let redShirts = runners.filter((runners) => {
+  return runners.company_name === "DabZ" || runners.company_name === "Livetube" || runners.company_name === "Quaxo";
+});
+console.log(redShirts);
+
+// Problem 3: A special letter will be sent out to those who have donated more than 100$. Find out how many of the runners have donated more than 100$. 
+
+let specialLetter = runners.reduce((overHundred, runners) => {
+  return overHundred += (runners.donation >= 100);
+}, 0);
+console.log(specialLetter);
