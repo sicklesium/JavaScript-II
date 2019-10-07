@@ -4,6 +4,16 @@
 // that manipulates variables defined in the outer scope.
 // The outer scope can be a parent function, or the top level of the script.
 
+const firstName = 'Anthony';
+
+function voiceMail() {
+  const middleInitial = 'J.';
+  const lastName = 'Crowley';
+  console.log('The name is ' + firstName + ' ' + middleInitial + ' ' + lastName + '. Leave a message, and do it in style.');
+};
+
+voiceMail();
+
 
 /* STRETCH PROBLEMS, Do not attempt until you have completed all previous tasks for today's project files */
 
